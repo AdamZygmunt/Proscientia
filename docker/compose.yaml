@@ -1,0 +1,136 @@
+version: "3.9"
+
+name: proscientia
+
+services:
+
+  db:
+    build:
+      context: ..
+      dockerfile: docker/postgres/Dockerfile
+    env_file: .env
+    container_name: proscientia_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ../data/postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-proscientia} -h localhost"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/backend/Dockerfile
+    env_file: .env
+    container_name: proscientia_backend
+    volumes:
+      - ../backend:/app
+      - ../backend/media:/app/media
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - mock-erp-mes
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: docker/frontend/Dockerfile
+    env_file: .env
+    container_name: proscientia_frontend
+    volumes:
+      - ../frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:5173 >/dev/null 2>&1 || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+
+  mock-erp-mes:
+    build:
+      context: ..
+      dockerfile: docker/mock/Dockerfile
+    env_file: .env
+    container_name: proscientia_mock
+    volumes:
+      - ../mock/app:/app/app
+      - ../mock/data:/data
+    ports:
+      - "8001:8001"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8001/health >/dev/null 2>&1 || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+
+  pgadmin:
+    image: dpage/pgadmin4:8
+    container_name: proscientia_pgadmin
+    env_file: .env
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    volumes:
+      - ../data/pgadmin:/var/lib/pgadmin
+    depends_on:
+      - db
+    ports:
+      - "5050:80"
+
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: proscientia_redis
+  #   env_file:
+  #     - ./.env
+  #   ports:
+  #     - "6379:6379"
+  #   healthcheck:
+  #     test: ["CMD", "redis-cli", "ping"]
+  #     interval: 5s
+  #     timeout: 3s
+  #     retries: 20
+
+  # celery:
+  #   build:
+  #     context: ..
+  #     dockerfile: docker/celery/Dockerfile
+  #   container_name: proscientia_celery
+  #   env_file:
+  #     - ./.env
+  #   environment:
+  #     - ROLE=worker
+  #   volumes:
+  #     - ../backend:/app
+  #   depends_on:
+  #     - backend
+  #     # - redis
+  #     - db
+
+  # beat:
+  #   build:
+  #     context: ..
+  #     dockerfile: docker/celery/Dockerfile
+  #   container_name: proscientia_beat
+  #   env_file:
+  #     - ./.env
+  #   environment:
+  #     - ROLE=beat
+  #   volumes:
+  #     - ../backend:/app
+  #   depends_on:
+  #     - backend
+  #     # - redis
+  #     - db
+
+volumes:
+  db_data:
+  pgadmin_data:

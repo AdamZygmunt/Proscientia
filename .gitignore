@@ -1,0 +1,84 @@
+# ---- Global OS / IDE ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace
+
+# ---- Python / Django ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc.*
+*.so
+*.egg-info/
+.eggs/
+.venv/
+venv/
+ENV/
+.Python
+.python-version
+.mypy_cache/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+db.sqlite3
+
+# Django static/media (produkcyjne artefakty)
+staticfiles/
+# Media: ignoruj wszystko, ale pozwól na assets w razie potrzeby
+backend/media/**
+!backend/media/.gitkeep
+!backend/media/assets/**
+# jeśli chcesz trzymać tylko małe logo, wrzuć je do backend/media/assets/
+
+# ---- Node / Vite / React ----
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+# (jeśli chcesz commitować lockfile, usuń powyższą linię)
+dist/
+build/
+.cache/
+.tmp/
+.vite/
+coverage/
+*.tsbuildinfo
+
+# ---- Docker / Compose / Run artifacts ----
+*.pid
+*.log
+logs/
+# Dane trwałe (wolumeny lokalne)
+data/**
+!data/.gitkeep
+data/postgres/**
+!data/postgres/.gitkeep
+data/pgadmin/**
+!data/pgadmin/.gitkeep
+data/media/**
+!data/media/.gitkeep
+
+# ---- Mock data (duże pliki i prywatne PDF-y) ----
+mock/data/**
+!mock/data/.gitkeep
+# Jeżeli chcesz commitować przykładowy manifest lub małe sample:
+# !mock/data/manifest.json
+# !mock/data/erp/example/**
+# !mock/data/mes/example/**
+# !mock/data/docs/example/**
+
+# ---- Env / Secrets ----
+.env
+docker/.env
+
+# ---- Misc ----
+*.swp
+*.swo
+*.bak
+*.orig
