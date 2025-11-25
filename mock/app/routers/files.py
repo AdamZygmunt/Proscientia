@@ -31,3 +31,30 @@ def get_single_file(
 
     # FastAPI/Starlette ustawi Content-Type na podstawie rozszerzenia
     return FileResponse(path)
+
+
+@router.get("/docs-list")
+def list_docs() -> dict:
+    """
+    Zwraca listę dokumentów dostępnych w katalogu `data/docs/`.
+
+    Jeśli są podkatalogi (np. budownictwo/, finance/, ventilator_pb560/),
+    zwracamy ścieżkę względną względem DOCS_DIR:
+      - "ventilator_pb560/spec_pb560_requirements.pdf"
+    """
+    if not DOCS_DIR.exists():
+        return {"files": []}
+
+    files: list[dict] = []
+    for p in DOCS_DIR.rglob("*"):
+        if p.is_file():
+            rel_path = p.relative_to(DOCS_DIR).as_posix()
+            files.append(
+                {
+                    "name": rel_path,
+                    "size": p.stat().st_size,
+                }
+            )
+
+    files_sorted = sorted(files, key=lambda x: x["name"])
+    return {"files": files_sorted}

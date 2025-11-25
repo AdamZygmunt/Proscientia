@@ -90,50 +90,50 @@ services:
     ports:
       - "5050:80"
 
-  # redis:
-  #   image: redis:7-alpine
-  #   container_name: proscientia_redis
-  #   env_file:
-  #     - ./.env
-  #   ports:
-  #     - "6379:6379"
-  #   healthcheck:
-  #     test: ["CMD", "redis-cli", "ping"]
-  #     interval: 5s
-  #     timeout: 3s
-  #     retries: 20
+  redis:
+    image: redis:7-alpine
+    container_name: proscientia_redis
+    env_file:
+      - ./.env
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
 
-  # celery:
-  #   build:
-  #     context: ..
-  #     dockerfile: docker/celery/Dockerfile
-  #   container_name: proscientia_celery
-  #   env_file:
-  #     - ./.env
-  #   environment:
-  #     - ROLE=worker
-  #   volumes:
-  #     - ../backend:/app
-  #   depends_on:
-  #     - backend
-  #     # - redis
-  #     - db
+  celery:
+    build:
+      context: ..
+      dockerfile: docker/celery/Dockerfile
+    container_name: proscientia_celery
+    env_file:
+      - ./.env
+    environment:
+      - ROLE=worker
+    volumes:
+      - ../backend:/app
+    depends_on:
+      - backend
+      - redis
+      - db
 
-  # beat:
-  #   build:
-  #     context: ..
-  #     dockerfile: docker/celery/Dockerfile
-  #   container_name: proscientia_beat
-  #   env_file:
-  #     - ./.env
-  #   environment:
-  #     - ROLE=beat
-  #   volumes:
-  #     - ../backend:/app
-  #   depends_on:
-  #     - backend
-  #     # - redis
-  #     - db
+  beat:
+    build:
+      context: ..
+      dockerfile: docker/celery/Dockerfile
+    container_name: proscientia_beat
+    env_file:
+      - ./.env
+    environment:
+      - ROLE=beat
+    volumes:
+      - ../backend:/app
+    depends_on:
+      - backend
+      - redis
+      - db
 
 volumes:
   db_data:

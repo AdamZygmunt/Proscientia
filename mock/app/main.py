@@ -5,6 +5,7 @@ from .config import DOCS_DIR
 from .routers import erp as erp_router
 from .routers import mes as mes_router
 from .routers import files as files_router
+from .routers import manifest as manifest_router
 
 app = FastAPI(title="Mock ERP/MES API", version="0.1.0")
 
@@ -30,3 +31,4 @@ if DOCS_DIR.exists():
 app.include_router(erp_router.router)
 app.include_router(mes_router.router)
 app.include_router(files_router.router)
+app.include_router(manifest_router.router)

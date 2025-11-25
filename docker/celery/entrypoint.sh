@@ -5,7 +5,7 @@ set -e
 ROLE="${ROLE:-worker}"
 
 # Ustaw domyślny moduł settings, jeśli nie podano
-export DJANGO_SETTINGS_MODULE="${DJANGO_SETTINGS_MODULE:-config.settings.dev}"
+export DJANGO_SETTINGS_MODULE="${DJANGO_SETTINGS_MODULE:-proscientia.settings}"
 
 # Informacyjnie
 echo "[celery] ROLE=${ROLE}"
@@ -17,8 +17,8 @@ cd /app
 
 if [ "$ROLE" = "beat" ]; then
   echo "[celery] Starting Celery Beat..."
-  exec celery -A config.celery_app beat -l INFO
+  exec celery -A proscientia.celery_app beat -l INFO
 else
   echo "[celery] Starting Celery Worker..."
-  exec celery -A config.celery_app worker -l INFO --pool=threads
+  exec celery -A proscientia.celery_app worker -l INFO --pool=threads
 fi

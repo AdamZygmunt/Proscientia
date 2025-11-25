@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 from datetime import timedelta
+from celery.schedules import crontab
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -47,6 +48,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "users",
+    "erp_mes",
+    "documents",
 ]
 
 MIDDLEWARE = [
@@ -165,3 +168,27 @@ SIMPLE_JWT = {
 # --- CORS / CSRF (front na Vite: http://localhost:5173) ---
 CORS_ALLOWED_ORIGINS = env_list("CORS_ALLOWED_ORIGINS", "http://localhost:5173")
 CSRF_TRUSTED_ORIGINS = env_list("CSRF_TRUSTED_ORIGINS", "http://localhost:5173")
+
+
+
+# Broker/results – korzystamy z REDIS_URL z .env
+CELERY_BROKER_URL = os.getenv("REDIS_URL", "redis://redis:6379/0")
+CELERY_RESULT_BACKEND = CELERY_BROKER_URL
+
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_RESULT_SERIALIZER = "json"
+
+# Strefa czasowa – możesz użyć TIME_ZONE z settings
+CELERY_TIMEZONE = TIME_ZONE
+
+# Opcjonalnie: logowanie czasu rozpoczęcia zadań
+CELERY_TASK_TRACK_STARTED = True
+
+# Przykładowy harmonogram dla automatycznego SYNC ERP/MES (Celery Beat)
+CELERY_BEAT_SCHEDULE = {
+    "sync-erp-mes-snapshots-every-15-min": {
+        "task": "erp_mes.tasks.sync_erp_mes_snapshots_task",
+        "schedule": crontab(minute="*/15"),
+    },
+}

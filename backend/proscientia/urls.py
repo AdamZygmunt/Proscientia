@@ -22,4 +22,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     
     path("api/users/", include("users.urls")),
+    path("api/erp-mes/", include("erp_mes.urls")),
+    path("api/documents/", include("documents.urls")),
 ]

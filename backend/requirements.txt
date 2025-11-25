@@ -6,3 +6,7 @@ python-dotenv
 dj-database-url
 psycopg
 djangorestframework-simplejwt
+celery
+requests
+redis
+boto3
