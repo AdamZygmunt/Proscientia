@@ -1,0 +1,64 @@
+[
+  {
+    "product_id": "PB560",
+    "version": "v1",
+    "valid_from": "2025-12-01",
+    "description": "Baseline routing for PB560 ventilator assembly – pilot line.",
+    "operations": [
+      {
+        "operation_id": "OP-010",
+        "name": "PCB main board assembly (SMT)",
+        "sequence": 10,
+        "workcenter_id": "WC-SMT-01",
+        "std_time_min": 15,
+        "labor_skill": "electronics_operator",
+        "is_critical": true
+      },
+      {
+        "operation_id": "OP-020",
+        "name": "Power board assembly and inspection",
+        "sequence": 20,
+        "workcenter_id": "WC-SMT-01",
+        "std_time_min": 12,
+        "labor_skill": "electronics_operator",
+        "is_critical": true
+      },
+      {
+        "operation_id": "OP-030",
+        "name": "Final mechanical assembly",
+        "sequence": 30,
+        "workcenter_id": "WC-MECH-01",
+        "std_time_min": 25,
+        "labor_skill": "mechanical_assembler",
+        "is_critical": true
+      },
+      {
+        "operation_id": "OP-040",
+        "name": "Electrical safety test",
+        "sequence": 40,
+        "workcenter_id": "WC-TEST-01",
+        "std_time_min": 18,
+        "labor_skill": "test_technician",
+        "is_critical": true
+      },
+      {
+        "operation_id": "OP-050",
+        "name": "Final functional test and calibration",
+        "sequence": 50,
+        "workcenter_id": "WC-TEST-02",
+        "std_time_min": 22,
+        "labor_skill": "test_technician",
+        "is_critical": true
+      },
+      {
+        "operation_id": "OP-060",
+        "name": "Final visual inspection and packing",
+        "sequence": 60,
+        "workcenter_id": "WC-PACK-01",
+        "std_time_min": 10,
+        "labor_skill": "quality_inspector",
+        "is_critical": false
+      }
+    ]
+  }
+]

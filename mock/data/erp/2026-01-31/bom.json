@@ -1,0 +1,132 @@
+[
+  {
+    "product_id": "PB560",
+    "version": "v1",
+    "valid_from": "2025-12-01",
+    "valid_to": "2026-01-09",
+    "description": "Baseline BOM for PB560 ventilator – pilot production version.",
+    "components": [
+      {
+        "component_id": "PB560-PCB-MAIN",
+        "description": "Main control board",
+        "uom": "pcs",
+        "quantity_per": 1,
+        "supplier": "Acme Electronics"
+      },
+      {
+        "component_id": "PB560-PCB-POWER",
+        "description": "Power supply board",
+        "uom": "pcs",
+        "quantity_per": 1,
+        "supplier": "Acme Electronics"
+      },
+      {
+        "component_id": "PB560-TURBINE",
+        "description": "Turbine assembly",
+        "uom": "pcs",
+        "quantity_per": 1,
+        "supplier": "Venturi Medical"
+      },
+      {
+        "component_id": "PB560-VALVE-SET",
+        "description": "Valve set (inspiratory/expiratory)",
+        "uom": "set",
+        "quantity_per": 1,
+        "supplier": "FlowTech"
+      },
+      {
+        "component_id": "PB560-HOUSING",
+        "description": "Plastic housing set",
+        "uom": "set",
+        "quantity_per": 1,
+        "supplier": "PlastiForm"
+      },
+      {
+        "component_id": "PB560-DISPLAY",
+        "description": "Front panel display",
+        "uom": "pcs",
+        "quantity_per": 1,
+        "supplier": "VisionDisplay"
+      },
+      {
+        "component_id": "PB560-HARNESS",
+        "description": "Wiring harness kit",
+        "uom": "set",
+        "quantity_per": 1,
+        "supplier": "WireWorks"
+      },
+      {
+        "component_id": "PB560-SCREW-KIT",
+        "description": "Mechanical fastening kit (screws, washers, nuts)",
+        "uom": "set",
+        "quantity_per": 1,
+        "supplier": "FastenPro"
+      }
+    ]
+  },
+  {
+    "product_id": "PB560",
+    "version": "v2",
+    "valid_from": "2026-01-10",
+    "valid_to": null,
+    "description": "Updated BOM for PB560 ventilator – cost-optimized valve supplier.",
+    "components": [
+      {
+        "component_id": "PB560-PCB-MAIN",
+        "description": "Main control board",
+        "uom": "pcs",
+        "quantity_per": 1,
+        "supplier": "Acme Electronics"
+      },
+      {
+        "component_id": "PB560-PCB-POWER",
+        "description": "Power supply board",
+        "uom": "pcs",
+        "quantity_per": 1,
+        "supplier": "Acme Electronics"
+      },
+      {
+        "component_id": "PB560-TURBINE",
+        "description": "Turbine assembly",
+        "uom": "pcs",
+        "quantity_per": 1,
+        "supplier": "Venturi Medical"
+      },
+      {
+        "component_id": "PB560-VALVE-SET",
+        "description": "Valve set (inspiratory/expiratory)",
+        "uom": "set",
+        "quantity_per": 1,
+        "supplier": "FlowTech Plus"
+      },
+      {
+        "component_id": "PB560-HOUSING",
+        "description": "Plastic housing set",
+        "uom": "set",
+        "quantity_per": 1,
+        "supplier": "PlastiForm"
+      },
+      {
+        "component_id": "PB560-DISPLAY",
+        "description": "Front panel display",
+        "uom": "pcs",
+        "quantity_per": 1,
+        "supplier": "VisionDisplay"
+      },
+      {
+        "component_id": "PB560-HARNESS",
+        "description": "Wiring harness kit",
+        "uom": "set",
+        "quantity_per": 1,
+        "supplier": "WireWorks"
+      },
+      {
+        "component_id": "PB560-SCREW-KIT",
+        "description": "Mechanical fastening kit (screws, washers, nuts)",
+        "uom": "set",
+        "quantity_per": 1,
+        "supplier": "FastenPro"
+      }
+    ]
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "check_id": "QC-2025-12-0001",
+    "batch_id": "B-2025-12-001",
+    "product_id": "PB560",
+    "checkpoint": "Electrical safety test",
+    "result": "pass",
+    "defect_code": null,
+    "measured_values": {
+      "leak_test_result": "pass",
+      "ground_resistance_ohm": 0.12
+    },
+    "inspector_id": "OP-001",
+    "timestamp": "2025-12-15T11:45:00",
+    "remarks": "All units passed electrical safety test."
+  },
+  {
+    "check_id": "QC-2025-12-0002",
+    "batch_id": "B-2025-12-001",
+    "product_id": "PB560",
+    "checkpoint": "Final visual inspection",
+    "result": "fail",
+    "defect_code": "SCRATCH_HOUSING",
+    "measured_values": {
+      "affected_units": 1
+    },
+    "inspector_id": "OP-002",
+    "timestamp": "2025-12-15T12:20:00",
+    "remarks": "One unit rejected due to visible scratch on front housing."
+  },
+  {
+    "check_id": "QC-2025-12-0003",
+    "batch_id": "B-2025-12-002",
+    "product_id": "PB560",
+    "checkpoint": "Functional test",
+    "result": "fail",
+    "defect_code": "ALARM_CALIBRATION",
+    "measured_values": {
+      "affected_units": 2,
+      "alarm_threshold_expected": 25,
+      "alarm_threshold_measured": 29
+    },
+    "inspector_id": "OP-003",
+    "timestamp": "2025-12-16T12:30:00",
+    "remarks": "Two units failed functional test due to alarm threshold out of spec."
+  },
+  {
+    "check_id": "QC-2025-12-0004",
+    "batch_id": "B-2025-12-003",
+    "product_id": "PB560",
+    "checkpoint": "Final functional test",
+    "result": "pass",
+    "defect_code": null,
+    "measured_values": {
+      "affected_units": 0
+    },
+    "inspector_id": "OP-001",
+    "timestamp": "2025-12-16T16:30:00",
+    "remarks": "All units within specification."
+  },
+  {
+    "check_id": "QC-2026-01-0002",
+    "batch_id": "B-2026-01-002",
+    "product_id": "PB560",
+    "checkpoint": "Functional test",
+    "result": "fail",
+    "defect_code": "VALVE_FLOW_VARIATION",
+    "measured_values": {
+      "affected_units": 4,
+      "max_flow_deviation_percent": 12.5
+    },
+    "inspector_id": "OP-003",
+    "timestamp": "2026-01-15T15:10:00",
+    "remarks": "Flow instability observed on units using new valve set (BOM v2)."
+  },
+  {
+    "check_id": "QC-2026-01-0003",
+    "batch_id": "B-2026-01-003",
+    "product_id": "PB560",
+    "checkpoint": "Functional test",
+    "result": "fail",
+    "defect_code": "VALVE_FLOW_VARIATION",
+    "measured_values": {
+      "affected_units": 5,
+      "max_flow_deviation_percent": 15.0
+    },
+    "inspector_id": "OP-003",
+    "timestamp": "2026-01-20T15:40:00",
+    "remarks": "Defect repeated at higher rate – suspected correlation with valve supplier change."
+  },
+  {
+    "check_id": "QC-2026-01-0004",
+    "batch_id": "B-2026-01-004",
+    "product_id": "PB560",
+    "checkpoint": "Functional test",
+    "result": "fail",
+    "defect_code": "VALVE_FLOW_VARIATION",
+    "measured_values": {
+      "affected_units": 2,
+      "max_flow_deviation_percent": 11.0
+    },
+    "inspector_id": "OP-001",
+    "timestamp": "2026-01-25T14:20:00",
+    "remarks": "Trial on LINE-2 confirms the same functional issue with BOM v2."
+  },
+  {
+    "check_id": "QC-2026-02-0001",
+    "batch_id": "B-2026-02-001",
+    "product_id": "PB560",
+    "checkpoint": "Valve flow pre-check",
+    "result": "pass",
+    "defect_code": null,
+    "measured_values": {
+      "sample_size": 5,
+      "max_flow_deviation_percent": 3.2
+    },
+    "inspector_id": "OP-003",
+    "timestamp": "2026-02-26T10:15:00",
+    "remarks": "All sampled units within tightened flow limits (BOM v3, routing v2)."
+  },
+  {
+    "check_id": "QC-2026-02-0002",
+    "batch_id": "B-2026-02-001",
+    "product_id": "PB560",
+    "checkpoint": "Final functional test",
+    "result": "pass",
+    "defect_code": null,
+    "measured_values": {
+      "affected_units": 0
+    },
+    "inspector_id": "OP-001",
+    "timestamp": "2026-02-26T11:50:00",
+    "remarks": "Validation batch passed all functional requirements – no valve-related defects."
+  },
+  {
+    "check_id": "QC-2026-03-0001",
+    "batch_id": "B-2026-03-001",
+    "product_id": "PB560",
+    "checkpoint": "Final functional test",
+    "result": "pass",
+    "defect_code": null,
+    "measured_values": {
+      "affected_units": 0
+    },
+    "inspector_id": "OP-001",
+    "timestamp": "2026-03-05T14:50:00",
+    "remarks": "All units passed functional test under BOM v3 – single cosmetic reject tracked separately."
+  },
+  {
+    "check_id": "QC-2026-03-0002",
+    "batch_id": "B-2026-03-001",
+    "product_id": "PB560",
+    "checkpoint": "Final visual inspection",
+    "result": "fail",
+    "defect_code": "SCRATCH_HOUSING",
+    "measured_values": {
+      "affected_units": 1
+    },
+    "inspector_id": "OP-002",
+    "timestamp": "2026-03-05T15:10:00",
+    "remarks": "Single cosmetic defect – unrelated to valve flow problem."
+  },
+  {
+    "check_id": "QC-2026-03-0003",
+    "batch_id": "B-2026-03-002",
+    "product_id": "PB560",
+    "checkpoint": "Valve flow pre-check",
+    "result": "pass",
+    "defect_code": null,
+    "measured_values": {
+      "sample_size": 6,
+      "max_flow_deviation_percent": 2.7
+    },
+    "inspector_id": "OP-003",
+    "timestamp": "2026-03-12T11:20:00",
+    "remarks": "No abnormal flow variation detected on LINE-2 under BOM v3."
+  },
+  {
+    "check_id": "QC-2026-03-0004",
+    "batch_id": "B-2026-03-002",
+    "product_id": "PB560",
+    "checkpoint": "Final functional test",
+    "result": "pass",
+    "defect_code": null,
+    "measured_values": {
+      "affected_units": 0
+    },
+    "inspector_id": "OP-001",
+    "timestamp": "2026-03-12T16:40:00",
+    "remarks": "Early national reserve batch – functional performance stable; only one cosmetic reject noted in batch log."
+  }
+]

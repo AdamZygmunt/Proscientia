@@ -1,0 +1,20 @@
+[
+  {
+    "shift_id": "S-2025-12-15-A",
+    "date": "2025-12-15",
+    "shift_code": "A",
+    "line_id": "LINE-1",
+    "supervisor_id": "SUP-001",
+    "operator_ids": ["OP-001", "OP-002", "OP-004"],
+    "notes": "First pilot production batch B-2025-12-001 on PB560 line."
+  },
+  {
+    "shift_id": "S-2025-12-16-A",
+    "date": "2025-12-16",
+    "shift_code": "A",
+    "line_id": "LINE-1",
+    "supervisor_id": "SUP-001",
+    "operator_ids": ["OP-001", "OP-003"],
+    "notes": "Second pilot batch B-2025-12-002 and small batch B-2025-12-003."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "event_id": "DT-2026-02-0001",
+    "machine_id": "WC-TEST-01",
+    "line_id": "LINE-1",
+    "start_time": "2026-02-20T07:30:00",
+    "end_time": "2026-02-20T09:00:00",
+    "duration_min": 90,
+    "type": "planned",
+    "reason_code": "ROUTING_UPDATE",
+    "description": "Implementation of valve flow pre-check step (routing v2) and station reconfiguration.",
+    "reported_by": "ENG-001"
+  },
+  {
+    "event_id": "DT-2026-02-0002",
+    "machine_id": "WC-TEST-02",
+    "line_id": "LINE-1",
+    "start_time": "2026-02-20T09:00:00",
+    "end_time": "2026-02-20T10:15:00",
+    "duration_min": 75,
+    "type": "planned",
+    "reason_code": "VALIDATION_RUN",
+    "description": "Validation of new functional test sequence under routing v2.",
+    "reported_by": "ENG-001"
+  },
+  {
+    "event_id": "DT-2026-04-0001",
+    "machine_id": "WC-SMT-01",
+    "line_id": "LINE-1",
+    "start_time": "2026-04-10T12:00:00",
+    "end_time": "2026-04-10T13:00:00",
+    "duration_min": 60,
+    "type": "planned",
+    "reason_code": "PREVENTIVE_MAINTENANCE",
+    "description": "Scheduled cleaning and visual inspection of SMT feeders.",
+    "reported_by": "MAINT-001"
+  },
+  {
+    "event_id": "DT-2026-04-0002",
+    "machine_id": "WC-TEST-01",
+    "line_id": "LINE-1",
+    "start_time": "2026-04-18T09:30:00",
+    "end_time": "2026-04-18T10:15:00",
+    "duration_min": 45,
+    "type": "planned",
+    "reason_code": "CALIBRATION",
+    "description": "Routine calibration of flow measurement channel under BOM v3 program.",
+    "reported_by": "MET-001"
+  }
+]

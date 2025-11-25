@@ -1,0 +1,62 @@
+[
+  {
+    "machine_id": "WC-SMT-01",
+    "name": "SMT Line 1",
+    "type": "SMT",
+    "location": "Plant-1 / Hall-A",
+    "line_id": "LINE-1",
+    "status": "available",
+    "commissioned_at": "2025-11-20",
+    "remarks": "Primary SMT line for PB560 boards."
+  },
+  {
+    "machine_id": "WC-MECH-01",
+    "name": "Mechanical Assembly Station 1",
+    "type": "assembly_station",
+    "location": "Plant-1 / Hall-A",
+    "line_id": "LINE-1",
+    "status": "available",
+    "commissioned_at": "2025-11-25",
+    "remarks": "Pilot mechanical assembly station for PB560."
+  },
+  {
+    "machine_id": "WC-MECH-02",
+    "name": "Mechanical Assembly Station 2",
+    "type": "assembly_station",
+    "location": "Plant-1 / Hall-A",
+    "line_id": "LINE-2",
+    "status": "available",
+    "commissioned_at": "2026-01-05",
+    "remarks": "Additional station to support PB560 ramp-up on LINE-2."
+  },
+  {
+    "machine_id": "WC-TEST-01",
+    "name": "Electrical Safety Test Bench",
+    "type": "test_bench",
+    "location": "Plant-1 / Lab-1",
+    "line_id": "LINE-1",
+    "status": "available",
+    "commissioned_at": "2025-12-01",
+    "remarks": "Performs electrical safety test according to PB560 procedures."
+  },
+  {
+    "machine_id": "WC-TEST-02",
+    "name": "Functional Test Bench",
+    "type": "test_bench",
+    "location": "Plant-1 / Lab-1",
+    "line_id": "LINE-1",
+    "status": "available",
+    "commissioned_at": "2025-12-01",
+    "remarks": "Simulates patient breathing conditions and performs full functional test."
+  },
+  {
+    "machine_id": "WC-PACK-01",
+    "name": "Final Inspection & Packing Station",
+    "type": "inspection_station",
+    "location": "Plant-1 / Shipping",
+    "line_id": "LINE-1",
+    "status": "available",
+    "commissioned_at": "2025-11-28",
+    "remarks": "Visual inspection and packing for shipment."
+  }
+]

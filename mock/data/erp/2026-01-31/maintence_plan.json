@@ -1,0 +1,47 @@
+[
+  {
+    "plan_id": "MP-SMT-DAILY",
+    "machine_id": "WC-SMT-01",
+    "description": "Daily visual inspection and cleaning for SMT line.",
+    "frequency": "daily",
+    "last_performed_date": "2026-01-30",
+    "next_due_date": "2026-01-31",
+    "responsible_role": "maintenance_technician"
+  },
+  {
+    "plan_id": "MP-TEST-WEEKLY",
+    "machine_id": "WC-TEST-01",
+    "description": "Weekly verification of test equipment calibration.",
+    "frequency": "weekly",
+    "last_performed_date": "2026-01-24",
+    "next_due_date": "2026-01-31",
+    "responsible_role": "metrology_engineer"
+  },
+  {
+    "plan_id": "MP-FUNC-WEEKLY",
+    "machine_id": "WC-TEST-02",
+    "description": "Weekly functional self-test of PB560 functional test bench.",
+    "frequency": "weekly",
+    "last_performed_date": "2026-01-24",
+    "next_due_date": "2026-01-31",
+    "responsible_role": "test_technician"
+  },
+  {
+    "plan_id": "MP-MECH-MONTHLY-01",
+    "machine_id": "WC-MECH-01",
+    "description": "Monthly torque tool verification and fixture inspection.",
+    "frequency": "monthly",
+    "last_performed_date": "2025-12-30",
+    "next_due_date": "2026-01-30",
+    "responsible_role": "maintenance_technician"
+  },
+  {
+    "plan_id": "MP-MECH-MONTHLY-02",
+    "machine_id": "WC-MECH-02",
+    "description": "Monthly mechanical station verification after ramp-up.",
+    "frequency": "monthly",
+    "last_performed_date": null,
+    "next_due_date": "2026-02-05",
+    "responsible_role": "maintenance_technician"
+  }
+]

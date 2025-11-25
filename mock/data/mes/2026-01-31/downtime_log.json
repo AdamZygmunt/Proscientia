@@ -1,0 +1,62 @@
+[
+  {
+    "event_id": "DT-2025-12-0001",
+    "machine_id": "WC-SMT-01",
+    "line_id": "LINE-1",
+    "start_time": "2025-12-15T09:40:00",
+    "end_time": "2025-12-15T10:05:00",
+    "duration_min": 25,
+    "type": "unplanned",
+    "reason_code": "FEEDER_JAM",
+    "description": "SMT feeder jam during main PCB assembly.",
+    "reported_by": "OP-004"
+  },
+  {
+    "event_id": "DT-2025-12-0002",
+    "machine_id": "WC-TEST-02",
+    "line_id": "LINE-1",
+    "start_time": "2025-12-16T10:15:00",
+    "end_time": "2025-12-16T10:35:00",
+    "duration_min": 20,
+    "type": "unplanned",
+    "reason_code": "SOFTWARE_RESTART",
+    "description": "Functional test bench software freeze – system restart required.",
+    "reported_by": "OP-003"
+  },
+  {
+    "event_id": "DT-2026-01-0001",
+    "machine_id": "WC-TEST-02",
+    "line_id": "LINE-1",
+    "start_time": "2026-01-15T11:20:00",
+    "end_time": "2026-01-15T11:45:00",
+    "duration_min": 25,
+    "type": "unplanned",
+    "reason_code": "RETEST_DUE_TO_DEFECT",
+    "description": "Additional retest cycles required due to flow variation defects.",
+    "reported_by": "OP-003"
+  },
+  {
+    "event_id": "DT-2026-01-0002",
+    "machine_id": "WC-MECH-01",
+    "line_id": "LINE-1",
+    "start_time": "2026-01-18T13:10:00",
+    "end_time": "2026-01-18T13:40:00",
+    "duration_min": 30,
+    "type": "unplanned",
+    "reason_code": "FIXTURE_ADJUSTMENT",
+    "description": "Adjustment of fixture due to minor misalignment detected by operator.",
+    "reported_by": "OP-002"
+  },
+  {
+    "event_id": "DT-2026-01-0003",
+    "machine_id": "WC-MECH-02",
+    "line_id": "LINE-2",
+    "start_time": "2026-01-25T10:30:00",
+    "end_time": "2026-01-25T11:05:00",
+    "duration_min": 35,
+    "type": "unplanned",
+    "reason_code": "TOOL_REPLACEMENT",
+    "description": "Torque driver replacement during first ramp-up batch on LINE-2.",
+    "reported_by": "OP-005"
+  }
+]

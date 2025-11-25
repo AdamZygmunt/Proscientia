@@ -1,0 +1,38 @@
+[
+  {
+    "shift_id": "S-2026-02-20-A",
+    "date": "2026-02-20",
+    "shift_code": "A",
+    "line_id": "LINE-1",
+    "supervisor_id": "SUP-001",
+    "operator_ids": ["OP-001", "OP-003"],
+    "notes": "Implementation of corrective actions: BOM v3 introduction and routing v2 validation on LINE-1."
+  },
+  {
+    "shift_id": "S-2026-02-26-A",
+    "date": "2026-02-26",
+    "shift_code": "A",
+    "line_id": "LINE-1",
+    "supervisor_id": "SUP-001",
+    "operator_ids": ["OP-001", "OP-003"],
+    "notes": "Validation batch B-2026-02-001 – no valve-related defects observed."
+  },
+  {
+    "shift_id": "S-2026-03-05-A",
+    "date": "2026-03-05",
+    "shift_code": "A",
+    "line_id": "LINE-1",
+    "supervisor_id": "SUP-001",
+    "operator_ids": ["OP-001", "OP-002"],
+    "notes": "Second validation batch B-2026-03-001 – only one cosmetic reject, functional performance stable."
+  },
+  {
+    "shift_id": "S-2026-03-12-A",
+    "date": "2026-03-12",
+    "shift_code": "A",
+    "line_id": "LINE-2",
+    "supervisor_id": "SUP-002",
+    "operator_ids": ["OP-001", "OP-005"],
+    "notes": "First BOM v3 production batch B-2026-03-002 on LINE-2 – no valve flow issues detected."
+  }
+]

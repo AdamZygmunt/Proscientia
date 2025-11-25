@@ -1,0 +1,38 @@
+[
+  {
+    "shift_id": "S-2026-04-05-A",
+    "date": "2026-04-05",
+    "shift_code": "A",
+    "line_id": "LINE-2",
+    "supervisor_id": "SUP-002",
+    "operator_ids": ["OP-001", "OP-005"],
+    "notes": "National reserve batch B-2026-04-001 – reference shift after corrective actions."
+  },
+  {
+    "shift_id": "S-2026-04-12-A",
+    "date": "2026-04-12",
+    "shift_code": "A",
+    "line_id": "LINE-2",
+    "supervisor_id": "SUP-002",
+    "operator_ids": ["OP-001", "OP-005"],
+    "notes": "Stable production on LINE-2 – used in system demo as example of post-correction performance."
+  },
+  {
+    "shift_id": "S-2026-04-20-A",
+    "date": "2026-04-20",
+    "shift_code": "A",
+    "line_id": "LINE-1",
+    "supervisor_id": "SUP-001",
+    "operator_ids": ["OP-001", "OP-002"],
+    "notes": "Krakow follow-up batch B-2026-04-003 – no functional defects, only routine checks."
+  },
+  {
+    "shift_id": "S-2026-04-28-A",
+    "date": "2026-04-28",
+    "shift_code": "A",
+    "line_id": "LINE-1",
+    "supervisor_id": "SUP-001",
+    "operator_ids": ["OP-001", "OP-002"],
+    "notes": "Second half of Krakow order – single cosmetic reject, functional metric trend remains stable."
+  }
+]

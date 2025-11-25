@@ -1,0 +1,26 @@
+[
+  {
+    "event_id": "DT-2025-12-0001",
+    "machine_id": "WC-SMT-01",
+    "line_id": "LINE-1",
+    "start_time": "2025-12-15T09:40:00",
+    "end_time": "2025-12-15T10:05:00",
+    "duration_min": 25,
+    "type": "unplanned",
+    "reason_code": "FEEDER_JAM",
+    "description": "SMT feeder jam during main PCB assembly.",
+    "reported_by": "OP-004"
+  },
+  {
+    "event_id": "DT-2025-12-0002",
+    "machine_id": "WC-TEST-02",
+    "line_id": "LINE-1",
+    "start_time": "2025-12-16T10:15:00",
+    "end_time": "2025-12-16T10:35:00",
+    "duration_min": 20,
+    "type": "unplanned",
+    "reason_code": "SOFTWARE_RESTART",
+    "description": "Functional test bench software freeze - system restart required.",
+    "reported_by": "OP-003"
+  }
+]

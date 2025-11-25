@@ -1,0 +1,38 @@
+[
+  {
+    "shift_id": "S-2026-01-05-A",
+    "date": "2026-01-05",
+    "shift_code": "A",
+    "line_id": "LINE-1",
+    "supervisor_id": "SUP-001",
+    "operator_ids": ["OP-001", "OP-002", "OP-004"],
+    "notes": "Completion of WO-2025-12-002 batch B-2026-01-001 (BOM v1)."
+  },
+  {
+    "shift_id": "S-2026-01-15-A",
+    "date": "2026-01-15",
+    "shift_code": "A",
+    "line_id": "LINE-1",
+    "supervisor_id": "SUP-001",
+    "operator_ids": ["OP-001", "OP-003"],
+    "notes": "High-volume batch B-2026-01-002 (BOM v2) – increased number of functional test rejects."
+  },
+  {
+    "shift_id": "S-2026-01-20-A",
+    "date": "2026-01-20",
+    "shift_code": "A",
+    "line_id": "LINE-1",
+    "supervisor_id": "SUP-001",
+    "operator_ids": ["OP-001", "OP-003"],
+    "notes": "Follow-up batch B-2026-01-003 confirming recurring valve flow variation defect."
+  },
+  {
+    "shift_id": "S-2026-01-25-A",
+    "date": "2026-01-25",
+    "shift_code": "A",
+    "line_id": "LINE-2",
+    "supervisor_id": "SUP-002",
+    "operator_ids": ["OP-001", "OP-005"],
+    "notes": "First trial batch B-2026-01-004 on LINE-2 – same defect pattern observed."
+  }
+]

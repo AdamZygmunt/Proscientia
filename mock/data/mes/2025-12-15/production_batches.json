@@ -1,0 +1,41 @@
+[
+  {
+    "batch_id": "B-2025-12-001",
+    "work_order_id": "WO-2025-12-001",
+    "product_id": "PB560",
+    "line_id": "LINE-1",
+    "quantity_planned": 10,
+    "quantity_good": 9,
+    "quantity_reject": 1,
+    "start_time": "2025-12-15T08:00:00",
+    "end_time": "2025-12-15T12:30:00",
+    "status": "completed",
+    "remarks": "First pilot batch on PB560 line."
+  },
+  {
+    "batch_id": "B-2025-12-002",
+    "work_order_id": "WO-2025-12-001",
+    "product_id": "PB560",
+    "line_id": "LINE-1",
+    "quantity_planned": 10,
+    "quantity_good": 8,
+    "quantity_reject": 2,
+    "start_time": "2025-12-16T08:15:00",
+    "end_time": "2025-12-16T13:00:00",
+    "status": "completed",
+    "remarks": "Second pilot batch – minor issues during functional test."
+  },
+  {
+    "batch_id": "B-2025-12-003",
+    "work_order_id": "WO-2025-12-002",
+    "product_id": "PB560",
+    "line_id": "LINE-1",
+    "quantity_planned": 5,
+    "quantity_good": 5,
+    "quantity_reject": 0,
+    "start_time": "2025-12-16T14:00:00",
+    "end_time": "2025-12-16T17:00:00",
+    "status": "completed",
+    "remarks": "Small pre-production batch for Warsaw City Hospital."
+  }
+]

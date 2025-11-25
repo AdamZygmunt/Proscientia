@@ -1,0 +1,93 @@
+[
+  {
+    "batch_id": "B-2026-02-001",
+    "work_order_id": "WO-2026-02-001",
+    "product_id": "PB560",
+    "line_id": "LINE-1",
+    "quantity_planned": 10,
+    "quantity_good": 10,
+    "quantity_reject": 0,
+    "start_time": "2026-02-26T08:00:00",
+    "end_time": "2026-02-26T12:00:00",
+    "status": "completed",
+    "remarks": "First validation batch with BOM v3 and routing v2 – no functional defects."
+  },
+  {
+    "batch_id": "B-2026-03-001",
+    "work_order_id": "WO-2026-02-001",
+    "product_id": "PB560",
+    "line_id": "LINE-1",
+    "quantity_planned": 15,
+    "quantity_good": 14,
+    "quantity_reject": 1,
+    "start_time": "2026-03-05T08:10:00",
+    "end_time": "2026-03-05T15:20:00",
+    "status": "completed",
+    "remarks": "Second validation batch with BOM v3 – single cosmetic reject."
+  },
+  {
+    "batch_id": "B-2026-03-002",
+    "work_order_id": "WO-2026-03-001",
+    "product_id": "PB560",
+    "line_id": "LINE-2",
+    "quantity_planned": 20,
+    "quantity_good": 19,
+    "quantity_reject": 1,
+    "start_time": "2026-03-12T09:00:00",
+    "end_time": "2026-03-12T17:00:00",
+    "status": "completed",
+    "remarks": "Early batch for national reserve order under BOM v3 – stable functional performance."
+  },
+  {
+    "batch_id": "B-2026-04-001",
+    "work_order_id": "WO-2026-03-001",
+    "product_id": "PB560",
+    "line_id": "LINE-2",
+    "quantity_planned": 20,
+    "quantity_good": 20,
+    "quantity_reject": 0,
+    "start_time": "2026-04-05T08:30:00",
+    "end_time": "2026-04-05T16:00:00",
+    "status": "completed",
+    "remarks": "National reserve batch with BOM v3 – no defects recorded."
+  },
+  {
+    "batch_id": "B-2026-04-002",
+    "work_order_id": "WO-2026-03-001",
+    "product_id": "PB560",
+    "line_id": "LINE-2",
+    "quantity_planned": 10,
+    "quantity_good": 10,
+    "quantity_reject": 0,
+    "start_time": "2026-04-12T09:00:00",
+    "end_time": "2026-04-12T13:30:00",
+    "status": "completed",
+    "remarks": "Follow-up batch – used in presentation as example of stable production after corrective actions."
+  },
+  {
+    "batch_id": "B-2026-04-003",
+    "work_order_id": "WO-2026-04-001",
+    "product_id": "PB560",
+    "line_id": "LINE-1",
+    "quantity_planned": 15,
+    "quantity_good": 15,
+    "quantity_reject": 0,
+    "start_time": "2026-04-20T08:00:00",
+    "end_time": "2026-04-20T14:30:00",
+    "status": "completed",
+    "remarks": "First part of Krakow follow-up order under BOM v3 – reference for good performance."
+  },
+  {
+    "batch_id": "B-2026-04-004",
+    "work_order_id": "WO-2026-04-001",
+    "product_id": "PB560",
+    "line_id": "LINE-1",
+    "quantity_planned": 15,
+    "quantity_good": 14,
+    "quantity_reject": 1,
+    "start_time": "2026-04-28T08:10:00",
+    "end_time": "2026-04-28T15:00:00",
+    "status": "in_progress",
+    "remarks": "Second part of Krakow order – one cosmetic reject flagged during inspection."
+  }
+]

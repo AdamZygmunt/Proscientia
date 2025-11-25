@@ -65,8 +65,8 @@ data/media/**
 !data/media/.gitkeep
 
 # ---- Mock data (duże pliki i prywatne PDF-y) ----
-mock/data/**
-!mock/data/.gitkeep
+#mock/data/**
+#!mock/data/.gitkeep
 # Jeżeli chcesz commitować przykładowy manifest lub małe sample:
 # !mock/data/manifest.json
 # !mock/data/erp/example/**

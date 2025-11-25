@@ -1,0 +1,130 @@
+[
+  {
+    "check_id": "QC-2026-02-0001",
+    "batch_id": "B-2026-02-001",
+    "product_id": "PB560",
+    "checkpoint": "Valve flow pre-check",
+    "result": "pass",
+    "defect_code": null,
+    "measured_values": {
+      "sample_size": 5,
+      "max_flow_deviation_percent": 3.2
+    },
+    "inspector_id": "OP-003",
+    "timestamp": "2026-02-26T10:15:00",
+    "remarks": "All sampled units within tightened flow limits (BOM v3, routing v2)."
+  },
+  {
+    "check_id": "QC-2026-02-0002",
+    "batch_id": "B-2026-02-001",
+    "product_id": "PB560",
+    "checkpoint": "Final functional test",
+    "result": "pass",
+    "defect_code": null,
+    "measured_values": {
+      "affected_units": 0
+    },
+    "inspector_id": "OP-001",
+    "timestamp": "2026-02-26T11:50:00",
+    "remarks": "Validation batch passed all functional requirements – no valve-related defects."
+  },
+  {
+    "check_id": "QC-2026-03-0001",
+    "batch_id": "B-2026-03-001",
+    "product_id": "PB560",
+    "checkpoint": "Final functional test",
+    "result": "pass",
+    "defect_code": null,
+    "measured_values": {
+      "affected_units": 0
+    },
+    "inspector_id": "OP-001",
+    "timestamp": "2026-03-05T14:50:00",
+    "remarks": "All units passed functional test under BOM v3 – single cosmetic reject tracked separately."
+  },
+  {
+    "check_id": "QC-2026-03-0002",
+    "batch_id": "B-2026-03-001",
+    "product_id": "PB560",
+    "checkpoint": "Final visual inspection",
+    "result": "fail",
+    "defect_code": "SCRATCH_HOUSING",
+    "measured_values": {
+      "affected_units": 1
+    },
+    "inspector_id": "OP-002",
+    "timestamp": "2026-03-05T15:10:00",
+    "remarks": "Single cosmetic defect – unrelated to valve flow problem."
+  },
+  {
+    "check_id": "QC-2026-04-0001",
+    "batch_id": "B-2026-04-001",
+    "product_id": "PB560",
+    "checkpoint": "Valve flow pre-check",
+    "result": "pass",
+    "defect_code": null,
+    "measured_values": {
+      "sample_size": 6,
+      "max_flow_deviation_percent": 2.5
+    },
+    "inspector_id": "OP-003",
+    "timestamp": "2026-04-05T11:15:00",
+    "remarks": "Stable valve performance confirmed on national reserve batch."
+  },
+  {
+    "check_id": "QC-2026-04-0002",
+    "batch_id": "B-2026-04-001",
+    "product_id": "PB560",
+    "checkpoint": "Final functional test",
+    "result": "pass",
+    "defect_code": null,
+    "measured_values": {
+      "affected_units": 0
+    },
+    "inspector_id": "OP-001",
+    "timestamp": "2026-04-05T15:40:00",
+    "remarks": "No functional defects recorded – all units release-ready."
+  },
+  {
+    "check_id": "QC-2026-04-0003",
+    "batch_id": "B-2026-04-002",
+    "product_id": "PB560",
+    "checkpoint": "Final functional test",
+    "result": "pass",
+    "defect_code": null,
+    "measured_values": {
+      "affected_units": 0
+    },
+    "inspector_id": "OP-001",
+    "timestamp": "2026-04-12T13:10:00",
+    "remarks": "Batch used as reference example for presentation – defect-free functional tests."
+  },
+  {
+    "check_id": "QC-2026-04-0004",
+    "batch_id": "B-2026-04-003",
+    "product_id": "PB560",
+    "checkpoint": "Final functional test",
+    "result": "pass",
+    "defect_code": null,
+    "measured_values": {
+      "affected_units": 0
+    },
+    "inspector_id": "OP-001",
+    "timestamp": "2026-04-20T13:50:00",
+    "remarks": "Krakow follow-up batch – stable functional performance, used as long-term reference."
+  },
+  {
+    "check_id": "QC-2026-04-0005",
+    "batch_id": "B-2026-04-004",
+    "product_id": "PB560",
+    "checkpoint": "Final visual inspection",
+    "result": "fail",
+    "defect_code": "SCRATCH_HOUSING",
+    "measured_values": {
+      "affected_units": 1
+    },
+    "inspector_id": "OP-002",
+    "timestamp": "2026-04-28T14:40:00",
+    "remarks": "Single cosmetic defect – no functional issues observed in batch."
+  }
+]
