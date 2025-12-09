@@ -35,6 +35,11 @@ DEBUG = env_bool("DEBUG", True)
 ALLOWED_HOSTS = env_list("ALLOWED_HOSTS", "*")
 
 
+
+MOCK_API_BASE = os.getenv("MOCK_API_BASE")
+
+
+
 # Application definition
 
 INSTALLED_APPS = [

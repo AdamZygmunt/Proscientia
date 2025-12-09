@@ -21,9 +21,12 @@ class ErpMesSnapshotSerializer(serializers.ModelSerializer):
             "created_at",
             "updated_at",
         )
+        
 
 
 class ErpMesSnapshotListSerializer(serializers.ModelSerializer):
+    files_count = serializers.SerializerMethodField()
+    
     class Meta:
         model = ErpMesSnapshot
         fields = (
@@ -31,4 +34,8 @@ class ErpMesSnapshotListSerializer(serializers.ModelSerializer):
             "stream",
             "version_date",
             "is_latest",
+            "files_count",
         )
+        
+    def get_files_count(self, obj) -> int:
+        return obj.files_count

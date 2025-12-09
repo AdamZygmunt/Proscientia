@@ -53,15 +53,18 @@ const Login = () => {
   };
 
   return (
-    <div className="w-full text-slate-100 flex items-center justify-center">
-      {/* gradient tła */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(255,138,0,0.32),transparent_55%),radial-gradient(circle_at_bottom,_rgba(255,90,0,0.4),transparent_55%)]" />
-
-      
-
+    <div className="relative min-h-screen w-full text-slate-100 flex items-center justify-end px-32 lg:px-64 bg-zinc-950 login-gradient-bg">
+      {/* gradient tła 
+      <div
+        className="pointer-events-none absolute inset-0 z-0
+        bg-[radial-gradient(circle_at_10%_20%,rgba(249,115,22,0.28),transparent_55%),
+            radial-gradient(circle_at_85%_15%,rgba(250,204,21,0.2),transparent_55%),
+            radial-gradient(circle_at_40%_85%,rgba(248,113,113,0.2),transparent_55%)]"
+      />
+      */}
         <form
           onSubmit={handleSubmit}
-          className="bg-zinc-900 backdrop-blur-md rounded-2xl shadow-xl shadow-orange-900/30 px-6 py-8 space-y-7"
+          className="relative z-10 bg-zinc-900 backdrop-blur-md rounded-2xl shadow-xl shadow-orange-900/30 px-6 py-8"
         >
           <div className="w-full max-w-md px-6">
             <div className="flex flex-col items-center mb-8">
@@ -83,10 +86,8 @@ const Login = () => {
                 </p>
             </div>
           </div>
-          <div className="space-y-2">
-          </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 mb-8 mt-4">
             {/* EMAIL */}
             <div className="space-y-1 items-start text-left">
               <label
@@ -129,7 +130,7 @@ const Login = () => {
                 <button
                   type="button"
                   onClick={() => setShowPassword((prev) => !prev)}
-                  className="absolute inset-y-1 right-0 flex items-center p1-3 bg-transparent text-slate-400 hover:text-orange-400 hover:border-none"
+                  className="absolute inset-y-1 right-3 flex items-center p1-3 bg-transparent text-slate-400 hover:text-orange-400 hover:border-none"
                   aria-label={showPassword ? "Ukryj hasło" : "Pokaż hasło"}
                 >
                   {showPassword ? <FaEyeSlash /> : <FaEye />}
@@ -147,7 +148,7 @@ const Login = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-orange-500 via-orange-400 to-amber-300 text-slate-950 font-medium text-sm py-2.5 shadow-lg shadow-orange-900/30 hover:from-orange-400 hover:to-amber-200 disabled:opacity-60 disabled:cursor-not-allowed transition-colors hover:border-zinc-800"
+            className="btn-gradient-primary w-full h-[2.5rem] mt-4 mb-3"
           >
             {isLoading ? "Logowanie..." : "Zaloguj się"}
           </button>

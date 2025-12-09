@@ -18,7 +18,7 @@ def sync_erp_mes_snapshots_task():
     Odpowiednik ręcznego POST /api/erp-mes/snapshots/sync/.
     """
     client = MockErpMesClient()
-    manifest = client.get_manifest()
+    manifest = client.get_manifest(use_cache=False)
 
     for stream in ("erp", "mes"):
         stream_data = manifest.get(stream) or {}
@@ -39,7 +39,7 @@ def sync_erp_mes_snapshots_task():
 
             snapshot.is_latest = (ver == latest_str)
 
-            listing = client.get_stream_listing(stream=stream, date=ver)
+            listing = client.get_stream_listing(stream=stream, date=ver, use_cache=False)
             files = listing.get("files", [])
             snapshot.files = files
             snapshot.save()

@@ -24,6 +24,13 @@ class ErpMesSnapshot(models.Model):
     class Meta:
         unique_together = ("stream", "version_date")
         ordering = ["stream", "version_date"]
+        
+    @property
+    def files_count(self) -> int:
+        """Liczba plików zapisanych w tym snapshocie (cache z mocka)."""
+        if not self.files:
+            return 0
+        return len(self.files)
 
     def __str__(self) -> str:
         return f"{self.get_stream_display()} {self.version_date}"   # type: ignore

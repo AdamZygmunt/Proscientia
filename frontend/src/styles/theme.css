@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+  .btn-gradient-primary {
+    @apply inline-flex items-center justify-center rounded-lg text-sm font-medium
+      text-zinc-900 px-3 py-2
+      bg-gradient-to-r from-orange-500 via-orange-400 to-amber-300
+      shadow-lg shadow-orange-900/30
+      disabled:opacity-60 disabled:cursor-not-allowed
+      transition-all duration-300 border-none;
+    background-size: 200% 200%;
+  }
+
+  .btn-gradient-primary:hover {
+    @apply shadow-orange-900/40 border-none;
+    animation: btn-gradient-sweep 0.8s ease-out forwards;
+  }
+
+  .btn-icon {
+    @apply inline-flex items-center justify-center rounded-full
+      w-9 h-9 text-sm
+      bg-zinc-900/70 border border-zinc-700/70
+      hover:bg-zinc-800 hover:border-orange-600/80
+      transition-colors;
+  }
+}
+
+@keyframes btn-gradient-sweep {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+@layer utilities {
+  .login-gradient-bg {
+    background:
+      radial-gradient(circle at 10% 20%, rgba(249, 115, 22, 0.35), transparent 35%),
+      radial-gradient(circle at 85% 15%, rgba(250, 204, 21, 0.25), transparent 45%),
+      radial-gradient(circle at 40% 85%, rgba(248, 113, 113, 0.25), transparent 65%);
+  }
+}
