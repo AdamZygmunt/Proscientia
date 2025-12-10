@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import GenerateSummaryView
+from .views import TriggerSummaryView
 
 urlpatterns = [
-    path('summarize/<int:doc_id>/', GenerateSummaryView.as_view()),
+    path('summarize/<int:doc_id>/', TriggerSummaryView.as_view(), name='trigger-summary'),
 ]

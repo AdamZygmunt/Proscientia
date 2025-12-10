@@ -43,6 +43,8 @@ MOCK_API_BASE = os.getenv("MOCK_API_BASE")
 # Application definition
 
 INSTALLED_APPS = [
+    "daphne",
+    "channels",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -86,7 +88,20 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "proscientia.wsgi.application"
+#WSGI_APPLICATION = "proscientia.wsgi.application"
+
+ASGI_APPLICATION = "proscientia.asgi.application"   # <--- TO JEST NOWE SERCE APLIKACJI
+
+# Konfiguracja Redis dla WebSockets (ten sam Redis co dla Celery)
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [os.environ.get("REDIS_URL", "redis://redis:6379/0")],
+        },
+    },
+}
+
 
 DB_NAME = os.getenv("DB_NAME")
 DB_USER = os.getenv("DB_USER")

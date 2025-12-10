@@ -13,3 +13,8 @@ boto3
 openai>=1.0.0
 pypdf>=3.0.0
 tiktoken
+
+# WebSockets
+daphne>=4.0.0
+channels>=4.0.0
+channels_redis>=4.0.0
