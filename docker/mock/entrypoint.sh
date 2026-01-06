@@ -21,3 +21,5 @@ echo "[mock] Using MOCK_MANIFEST_PATH=${MOCK_MANIFEST_PATH}"
 
 # Start FastAPI + autoreload (dev)
 exec uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+
+# fox

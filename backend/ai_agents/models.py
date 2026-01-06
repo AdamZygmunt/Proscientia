@@ -2,6 +2,7 @@
 from django.db import models
 from django.conf import settings
 from documents.models import Document
+from pgvector.django import VectorField
 
 class AiSummary(models.Model):
     document = models.OneToOneField(Document, on_delete=models.CASCADE, related_name='ai_summary')
@@ -50,3 +51,20 @@ class AiArtifact(models.Model):
 
     def __str__(self):
         return f"{self.artifact_type} for doc {self.document_id} (user {self.owner_id})"        # type: ignore[attr-defined]
+    
+
+class DocumentChunk(models.Model):
+    # (Wiedza RAG)
+    """Przechowuje pocięte kawałki dokumentu wraz z ich wektorami."""
+    document = models.ForeignKey(Document, on_delete=models.CASCADE, related_name='chunks')
+    chunk_index = models.IntegerField()
+    text_content = models.TextField()
+    
+    # Wektor o wymiarze 1536 (OpenAI text-embedding-3-small)
+    embedding = VectorField(dimensions=1536) 
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['chunk_index']
+        # W przyszłości dodamy tu index HNSW dla wydajności

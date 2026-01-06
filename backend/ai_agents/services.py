@@ -4,6 +4,7 @@ import json
 from openai import OpenAI
 from django.conf import settings
 
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from documents.models import Document 
 from .models import AiArtifact
 
@@ -310,3 +311,32 @@ def build_summary_filename(document, user) -> str:
     """
     base = f"summary_doc{document.id}_user{user.id}"
     return f"{base}.txt"
+
+# RAG / EMBEDDINGS UTILS (DODANE)
+
+def create_smart_chunks(text, chunk_size=1000, chunk_overlap=200):
+    """
+    Używa LangChain do mądrego dzielenia tekstu (nie ucina zdań w połowie).
+    Zastępuje prosty chunk_text Piotra w zastosowaniach RAG.
+    """
+    splitter = RecursiveCharacterTextSplitter(
+        chunk_size=chunk_size,
+        chunk_overlap=chunk_overlap,
+        separators=["\n\n", "\n", ". ", " ", ""]
+    )
+    return splitter.split_text(text)
+
+def get_embedding(text):
+    """Zamienia tekst na wektor liczbowy (1536 liczb) używając OpenAI."""
+    client = OpenAI(api_key=settings.OPENAI_API_KEY)
+    text = text.replace("\n", " ")
+    
+    try:
+        response = client.embeddings.create(
+            input=[text],
+            model="text-embedding-3-small"
+        )
+        return response.data[0].embedding
+    except Exception as e:
+        print(f"Błąd Embedding OpenAI: {e}")
+        return []

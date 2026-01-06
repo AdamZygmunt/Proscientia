@@ -1,1 +1,10 @@
 Mock_data/** filter=lfs diff=lfs merge=lfs -text
+
+# Automatyczne wykrywanie dla większości plików
+* text=auto
+
+# WYMUSZENIE formatu LF dla skryptów (Naprawia błąd bash\r w Dockerze)
+*.sh text eol=lf
+
+# Wymuszenie LF dla Dockerfile (Dobra praktyka)
+Dockerfile text eol=lf

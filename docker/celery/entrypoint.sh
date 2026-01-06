@@ -22,3 +22,5 @@ else
   echo "[celery] Starting Celery Worker..."
   exec celery -A proscientia.celery_app worker -l INFO --pool=threads
 fi
+
+# fix

@@ -5,9 +5,10 @@ name: proscientia
 services:
 
   db:
-    build:
-      context: ..
-      dockerfile: docker/postgres/Dockerfile
+    #build:
+    #  context: ..
+    #  dockerfile: docker/postgres/Dockerfile
+    image: pgvector/pgvector:pg16  # Gotowy obraz z wektorami
     env_file: .env
     container_name: proscientia_db
     ports:

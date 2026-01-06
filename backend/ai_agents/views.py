@@ -4,7 +4,7 @@ from rest_framework import status
 from rest_framework.permissions import AllowAny  # <--- IMPORT 1
 from django.shortcuts import get_object_or_404
 from documents.models import Document
-from .tasks import generate_summary_task, generate_erp_mes_latest_report_task
+from .tasks import generate_summary_task, generate_erp_mes_latest_report_task, process_document_indexing_task
 from rest_framework.permissions import IsAuthenticated
 from .services import count_user_summaries_for_document
 from rest_framework import generics, permissions
@@ -46,6 +46,28 @@ class AiArtifactDetailView(generics.RetrieveDestroyAPIView):
     def get_queryset(self):
         return AiArtifact.objects.filter(owner=self.request.user)
 
+class TriggerIndexingView(APIView):
+    """
+    POST /api/agents/index/<doc_id>/
+    Ręczne wymuszenie indeksowania (RAG).
+    """
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, doc_id):
+        # Sprawdzamy czy dokument istnieje i należy do usera (lub user jest adminem)
+        # (W MVP upraszczamy - każdy zalogowany może indeksować)
+        try:
+             doc = Document.objects.get(pk=doc_id)
+        except Document.DoesNotExist:
+             return Response({"detail": "Not found"}, status=404)
+        
+        task = process_document_indexing_task.delay(doc.id)
+        
+        return Response({
+            "message": "Rozpoczęto indeksowanie RAG.",
+            "task_id": task.id,
+            "doc_id": doc.id
+        }, status=status.HTTP_202_ACCEPTED)
 
 class TriggerSummaryView(APIView):
     permission_classes = [IsAuthenticated]
@@ -109,3 +131,5 @@ class ErpMesQuickReportView(APIView):
             },
             status=status.HTTP_202_ACCEPTED,
         )
+
+

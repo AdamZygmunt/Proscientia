@@ -4,6 +4,7 @@ from .views import (
     ErpMesQuickReportView,
     AiArtifactListView,
     AiArtifactDetailView,
+    TriggerIndexingView
 )
 from django.conf import settings
 from django.conf.urls.static import static
@@ -27,6 +28,10 @@ urlpatterns = [
         AiArtifactDetailView.as_view(),
         name="ai-artifact-detail",
     ),
+    path(
+        "index/<int:doc_id>/", 
+        TriggerIndexingView.as_view(), 
+        name="agent-index"),
 ]
 
 if settings.DEBUG:
