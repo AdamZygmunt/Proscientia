@@ -18,6 +18,10 @@ from celery.schedules import crontab
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
 # --- ENV Helpers ---
 # --- ENV helpers ---
 def env_bool(name: str, default: bool = False) -> bool:

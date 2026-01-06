@@ -6,6 +6,7 @@ import { setApiErrorHandler, getAccessToken } from "./utils/axiosInstance";
 import GlobalErrorDialog from "./components/GlobalErrorDialog";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import AISummary from './pages/AISummary';
 
 function ProtectedRoute() {
   const isAuthed =
@@ -36,6 +37,7 @@ function App() {
         {/* Chronione trasy */}
         <Route element={<ProtectedRoute />}>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/summaries" element={<AISummary />} />
         </Route>
 
         {/* fallback */}
